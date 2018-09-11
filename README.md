@@ -30,9 +30,15 @@ add the following lines to your ``composer.json`` file.
 ```JSON
 {
     "require": {
-        "maxirus/fedex": "dev-master"
+        "RamiroAuditore/fedex": "dev-master"
     }
 }
+```
+Add the following lines to your .env and comment and uncomment based on your needs (Defaults to beta, which is for testing purposes)
+
+```
+FEDEX_URI=https://wsbeta.fedex.com:443/web-services
+#FEDEX_URI=https://ws.fedex.com:443/web-services
 ```
 <a name="track-class"></a>
 ## Track Class

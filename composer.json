@@ -1,5 +1,5 @@
 {
-    "name": "maxirus/fedex",
+    "name": "RamiroAuditore/fedex",
     "description": "FedEx API wrapper",
     "license": "MIT",
     "keywords": [
@@ -10,8 +10,8 @@
         ],
     "authors": [
         {
-            "name": "Dan Johnson",
-            "email": "dan@maxirus.com"
+            "name": "Ramiro Garcilazp",
+            "email": "ramiroauditore@hotmail.com"
         }
     ],
     "require": {
@@ -21,8 +21,6 @@
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
-        "psr-4": {
-            "FedEx\\": "src"
-        }
+        "classmap": [ "src/" ]
     }
 }

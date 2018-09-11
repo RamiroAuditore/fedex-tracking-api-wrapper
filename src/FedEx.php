@@ -39,7 +39,7 @@ class FedEx {
 		// Initialize request to an empty array
 		$this->request = array();
 
-		$this->customerTransactionId = "Defualt ID";
+		$this->customerTransactionId = "Default ID";
 
 		$this->key = $k;
 		$this->password = $p;
@@ -47,7 +47,7 @@ class FedEx {
 		$this->meter_num = $m;
 
 		// TODO: Change to env() and default to beta
-		$this->endPoint = 'https://wsbeta.fedex.com:443/web-services';
+		$this->endPoint = getenv('FEDEX_URI');
 		
 	}
 
@@ -94,7 +94,7 @@ class FedEx {
      */
     public function setVersion($service_id, $major, $intermediate, $minor) {
     	$this->service_id = $service_id;
-    	$this->major = $major;
+    	// $this->major = $major;
     	$this->intermediate = $intermediate;
     	$this->minor = $minor;
     }
@@ -134,7 +134,7 @@ class FedEx {
 		// Build API Version info
 		$this->request['Version'] = array(
 			'ServiceId' 	=> $this->service_id, 
-			'Major' 		=> $this->major, 
+			'Major' 		=> 16, 
 			'Intermediate'	=> $this->intermediate, 
 			'Minor' 		=> $this->minor
 		);
